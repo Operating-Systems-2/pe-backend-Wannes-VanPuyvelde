@@ -1,6 +1,8 @@
 FROM maven:3-openjdk-18 AS BUILD
 COPY pom.xml /tmp/
 COPY src /tmp/src/
+
+# set working directory
 WORKDIR /tmp/
 RUN mvn package
 
